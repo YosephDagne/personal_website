@@ -29,7 +29,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="relative py-24 bg-linear-to-b from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 overflow-hidden transition-colors duration-500">
+    <section className="relative py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-500">
       {/* Heading */}
       <div className="text-center mb-16">
         <h1 className="text-5xl sm:text-6xl font-extrabold text-gray-800 dark:text-white tracking-tight transition-colors duration-500">

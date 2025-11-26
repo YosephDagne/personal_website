@@ -54,17 +54,17 @@ const Hero = () => {
     <div
       id="home"
       className="flex flex-col items-center text-center gap-6 mt-20 px-4 py-8
-                 bg-gray-100 dark:bg-gray-900 transition-colors duration-500"
+                 bg-gray-50 dark:bg-gray-900 transition-colors duration-500"
     >
       {/* Profile Image */}
       <div className="relative">
         <Image
-          src={"/jo2.jpg"}
+          src="/jo2.jpg"
           alt="Yosef Dagne - Fullstack Web Developer"
           width={400}
-          height={240}
+          height={400} // square for consistent circle
           priority
-          className="md:w-52 md:h-52 rounded-full object-cover shadow-xl"
+          className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full object-cover shadow-xl"
         />
       </div>
 

@@ -9,7 +9,7 @@ export interface Service {
 const Services_Data: Service[] = [
   {
     s_no: "01",
-    s_name: "Web Development",
+    s_name: "Frontend Development",
     s_desc:
       "Building responsive and modern websites using React, Next.js, and Tailwind CSS.",
     icon: "/frontend.png",
