@@ -70,7 +70,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center gap-16 py-16 px-4 sm:px-8 md:px-16 lg:px-32 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200"
+      className="flex flex-col items-center gap-16 py-16 px-2 sm:px-8 md:px-16 lg:px-32 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200"
     >
       {/* Title */}
       <div className="text-center">
@@ -82,7 +82,7 @@ const Contact = () => {
 
       <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl">
         {/* Left Side Info */}
-        <div className="flex flex-col gap-8 w-full lg:w-1/2  lg:p-8 bg-gray-100 dark:bg-gray-800 rounded-lg">
+        <div className="flex flex-col gap-8 w-full lg:w-1/2  lg:p-8 bg-gray-100 dark:bg-gray-800 rounded-lg pl-0">
           <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-linear-to-r from-purple-700 to-orange-500">
             Let&apos;s Talk
           </h2>

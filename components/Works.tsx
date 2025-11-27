@@ -24,12 +24,12 @@ export default function MyWork() {
         {/* Title */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent mb-4">
-            My Projects{" "}
+             Projects{" "}
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
+          <div className="h-1.5 w-28 mx-auto rounded-full bg-linear-to-r from-purple-500 to-orange-400"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6 mt-6">
             Explore my latest projects and creative works
           </p>
-          <div className="h-1.5 w-28 mx-auto rounded-full bg-linear-to-r from-purple-500 to-orange-400"></div>
         </div>
 
         {/* Projects Grid */}

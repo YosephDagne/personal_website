@@ -8,6 +8,7 @@ import Works from "@/components/Works";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Accomplishments from "@/components/Accomplishment ";
 
 export default function Home() {
   return (
@@ -32,6 +33,10 @@ export default function Home() {
         <section className="mb-12 sm:mb-16 relative">
           <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-300/40 to-transparent dark:via-blue-600/20" />
           <About />
+        </section>
+        <section className="mb-12 sm:mb-16 relative">
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-300/40 to-transparent dark:via-blue-600/20" />
+          <Accomplishments />
         </section>
 
         {/* Services Section */}

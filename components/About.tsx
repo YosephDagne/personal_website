@@ -4,25 +4,23 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function About() {
-  const accomplishments = [
-    { value: "4", label: "Months Internship at Ethiopian Airlines" },
-    { value: "3+", label: "Projects Completed" },
-  ];
-
   return (
     <section
       id="about"
-      className="relative py-24 px-6 md:px-20 bg-gray-50 dark:bg-gray-900"
+      className="flex flex-col items-center gap-16 py-16 px-2 sm:px-8 md:px-16 lg:px-32 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200"
     >
       {/* Title */}
       <div className="text-center mb-20">
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold 
+          bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent"
+        >
           About Me
         </h1>
         <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400" />
       </div>
 
-      {/* Layout */}
+      {/* Content row */}
       <div className="flex flex-col md:flex-row items-start gap-20 max-w-7xl mx-auto">
         {/* Profile Card */}
         <motion.div
@@ -34,7 +32,7 @@ export default function About() {
         >
           <div className="rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/jo2.jpg" // update if needed
+              src="/jo2.jpg"
               width={400}
               height={400}
               alt="Profile"
@@ -47,7 +45,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* About Text Only (No Skills) */}
+        {/* About Text */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -74,48 +72,6 @@ export default function About() {
             and working on projects that make an impact.
           </p>
         </motion.div>
-      </div>
-
-      {/* Accomplishments */}
-      <div className="text-center mt-32 max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
-          Accomplishments
-        </h2>
-        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400" />
-
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {accomplishments.map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05, rotateX: 10 }}
-              transition={{ type: "spring", stiffness: 150, damping: 10 }}
-              className="p-10 bg-white/10 dark:bg-gray-800/30 backdrop-blur-xl 
-              rounded-2xl shadow-xl border border-white/20 dark:border-gray-700/40 
-              hover:border-purple-400/50 hover:shadow-purple-500/20 text-center 
-              flex flex-col items-center gap-6"
-            >
-              {/* Logo only for internship */}
-              {item.label.includes("Internship") && (
-                <div className="relative w-40 h-40">
-                  <Image
-                    src="/Airlineslogo.jpg"
-                    alt="Ethiopian Airlines"
-                    fill
-                    className="object-contain rounded-xl"
-                  />
-                </div>
-              )}
-
-              <p className="text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
-                {item.value}
-              </p>
-
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
-                {item.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

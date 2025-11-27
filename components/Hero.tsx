@@ -70,7 +70,7 @@ const Hero = () => {
 
       {/* Name */}
       <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-gray-100 mb-4">
-        <span className="bg-linear-to-r from-purple-600 to-orange-400 text-transparent bg-clip-text">
+        <span className="bg-linear-to-r from-purple-600 to-orange-400 text-transparent bg-clip-text"> Hey !
           I&apos;m Yosef Dagne
         </span>
       </h1>

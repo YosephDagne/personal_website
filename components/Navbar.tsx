@@ -15,6 +15,8 @@ function NavBar() {
     { id: "services", label: "Services" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
+    { id: "education", label: "Education" },
+    { id: "accomplishments", label: "Accomplishments" },
   ];
 
   const smoothScroll = (id: string) => {
@@ -25,12 +27,12 @@ function NavBar() {
   };
 
   return (
-    <div className="w-full flex items-center justify-between px-6 py-3 z-50 transition-all duration-500 bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-md">
+    <div className="w-full flex items-center justify-between px-6 py-3 z-50 transition-all duration-500 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
         <Flame className="w-20 h-10 text-orange-500" />
         <span className="text-2xl font-bold text-orange-500 dark:text-orange-400 bg-clip-text bg-linear-to-r from-orange-400 to-amber-500">
-          J
+          Joseph
         </span>
       </div>
 
@@ -52,10 +54,17 @@ function NavBar() {
               {item.label}
               {/* Animated Gradient Underline */}
               <span
-                className={`absolute left-1/2 bottom-0 w-0.5 h-1 rounded-full bg-linear-to-r from-orange-400 to-amber-400 transition-all duration-300 group-hover:w-full ${
-                  menu === item.id ? "w-full" : ""
-                }`}
-              ></span>
+                className={`
+    absolute left-1/2 bottom-0 
+    h-[3px] w-0 
+    bg-linear-to-r from-orange-400 to-amber-400 
+    rounded-full 
+    transition-all duration-300 
+    group-hover:w-1/3 
+    ${menu === item.id ? "w-1/3" : ""}
+    -translate-x-1/2 
+  `}
+              />
             </button>
           </li>
         ))}
