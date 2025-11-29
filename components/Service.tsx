@@ -36,10 +36,10 @@ export default function Services() {
             tabIndex={0}
             role="button"
             aria-label={`Read more about ${service.s_name}`}
-            className="relative flex flex-col justify-center gap-6 p-10 rounded-3xl
-                       bg-white/20 dark:bg-gray-800/40 backdrop-blur-lg
+            className="relative flex flex-col justify-center gap-6 p-10 rounded-2xl
+                       bg-gray-200 dark:bg-gray-800/40 backdrop-blur-lg
                        border border-white/20 dark:border-gray-700/40
-                       shadow-xl hover:shadow-purple-500/30 cursor-pointer
+                       shadow-2xl hover:shadow-purple-500/30 cursor-pointer
                        transition-all duration-300 focus:outline-none focus:ring-4
                        focus:ring-orange-400 focus:ring-opacity-50"
           >

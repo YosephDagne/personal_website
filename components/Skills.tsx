@@ -54,7 +54,7 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               {/* Glass Card */}
-              <div className="group relative bg-gray-300 dark:bg-gray-900 backdrop-blur-xl p-6 rounded-xl shadow-lg border border-white/20 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
+              <div className="group relative bg-violet-800 dark:bg-gray-900 backdrop-blur-xl p-6 rounded-xl shadow-lg border border-white/20 dark:border-gray-700/30 transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 <div
                   className={`text-5xl ${skill.color} transition-transform duration-300 group-hover:scale-110`}
                 >

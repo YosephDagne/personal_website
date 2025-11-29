@@ -27,7 +27,7 @@ export default function Accomplishments() {
               key={index}
               whileHover={{ scale: 1.05, rotateX: 10 }}
               transition={{ type: "spring", stiffness: 150, damping: 10 }}
-              className="p-10 bg-white/10 dark:bg-gray-800/30 backdrop-blur-xl 
+              className="p-10 bg-gray-200 dark:bg-gray-800/30 backdrop-blur-xl 
             rounded-2xl shadow-xl border border-white/20 dark:border-gray-700/40 
             hover:border-purple-400/50 hover:shadow-purple-500/20 text-center 
             flex flex-col items-center gap-6"

@@ -39,7 +39,7 @@ export default function Education() {
               key={index}
               whileHover={{ rotateX: 10, rotateY: -10, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 150, damping: 10 }}
-              className="relative bg-white/10 dark:bg-gray-800/30 backdrop-blur-lg
+              className="relative bg-gray-200 dark:bg-gray-800/30 backdrop-blur-lg
                 p-8 rounded-2xl shadow-lg hover:shadow-purple-500/30
                 border border-white/20 dark:border-gray-700/40
                 hover:border-purple-400/60 transition-all duration-300"

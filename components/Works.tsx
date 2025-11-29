@@ -18,7 +18,7 @@ export default function MyWork() {
   return (
     <section
       id="projects"
-      className="py-24 bg-linear-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800"
+      className="py-24 bg-gray-50 dark:bg-gray-900"
     >
       <div className="container mx-auto px-4">
         {/* Title */}
@@ -42,15 +42,15 @@ export default function MyWork() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
-              className="relative block rounded-2xl shadow-xl bg-white/20 dark:bg-gray-800/30 backdrop-blur-lg overflow-hidden cursor-pointer border border-white/20 dark:border-gray-700/40 hover:shadow-purple-500/30 transition-all duration-300"
+              className="relative block rounded-2xl shadow-2xl bg-gray-200 dark:bg-gray-800/30 backdrop-blur-lg overflow-hidden cursor-pointer  dark:border-gray-700/40 hover:shadow-2xl "
             >
               {/* Project Image */}
-              <div className="relative h-64 w-full ">
+              <div className="relative h-56 w-full ">
                 <Image
                   src={work.w_image}
                   alt={work.w_name}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 "
+                  className="object-cover hover:bg-gray-400 hover:shadow-2xl "
                 />
 
                 {/* Gradient Overlay */}
@@ -83,7 +83,7 @@ export default function MyWork() {
             <motion.button
               onClick={handleShowMore}
               whileHover={{ scale: 1.05 }}
-              className="group relative inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-purple-600 to-orange-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-700 hover:to-orange-600 cursor-pointer"
+              className="group relative inline-flex items-center gap-3 px-2 py-3 bg-linear-to-r from-purple-600 to-orange-800 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-700 hover:to-orange-600 cursor-pointer hover:border"
             >
               <span>{showMore ? "Show Less" : "Show More Projects"}</span>
               <ArrowRight

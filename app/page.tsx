@@ -25,47 +25,47 @@ export default function Home() {
 
         {/* Skills Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-purple-300/40 to-transparent dark:via-purple-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-purple-800 to-transparent dark:via-purple-800" />
           <Skills />
         </section>
 
         {/* About Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-300/40 to-transparent dark:via-blue-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-800 to-transparent dark:via-blue-900" />
           <About />
         </section>
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-300/40 to-transparent dark:via-blue-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue-800 to-transparent dark:via-blue-600" />
           <Accomplishments />
         </section>
 
         {/* Services Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-green-300/40 to-transparent dark:via-green-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-green-900 to-transparent dark:via-green-600" />
           <Services />
         </section>
 
         {/* Works Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange-300/40 to-transparent dark:via-orange-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange-700 to-transparent dark:via-orange-600" />
           <Works />
         </section>
 
         {/* Education Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-red-300/40 to-transparent dark:via-red-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-red-700 to-transparent dark:via-red-600" />
           <Education />
         </section>
 
         {/* Contact Section */}
         <section className="mb-12 sm:mb-16 relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-indigo-300/40 to-transparent dark:via-indigo-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-indigo-800 to-transparent dark:via-indigo-600" />
           <Contact />
         </section>
 
         {/* Footer Section */}
         <section className="relative">
-          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-gray-300/40 to-transparent dark:via-gray-600/20" />
+          <div className="absolute -top-6 left-0 right-0 h-px bg-linear-to-r from-transparent via-gray-900 to-transparent dark:via-gray-800" />
           <Footer />
         </section>
       </main>

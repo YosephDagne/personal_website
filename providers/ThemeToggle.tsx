@@ -26,12 +26,9 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="group relative p-3 rounded-full bg-linear-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900
+      className="group relative p-3 rounded-full bg-gray-100 dark:bg-gray-900  
                  text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-yellow-400
-                 shadow-lg hover:shadow-xl transform hover:scale-105
-                 transition-all duration-300 ease-out
-                 border border-gray-200 dark:border-gray-700
-                 hover:border-orange-300 dark:hover:border-yellow-500/30 cursor-pointer"
+                  hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer"
     >
       <div className="relative w-5 h-5">
         {theme === "dark" ? (
