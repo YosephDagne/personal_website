@@ -59,7 +59,7 @@ const Hero = () => {
       {/* Profile Image */}
       <div className="relative">
         <Image
-          src="/jo2.jpg"
+          src="/profile.jpg"
           alt="Yosef Dagne - Fullstack Web Developer"
           width={400}
           height={400} // square for consistent circle

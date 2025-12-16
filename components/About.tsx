@@ -32,7 +32,7 @@ export default function About() {
         >
           <div className="rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/jo2.jpg"
+              src="/profile.jpg"
               width={400}
               height={400}
               alt="Profile"
