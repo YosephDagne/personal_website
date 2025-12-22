@@ -16,7 +16,7 @@ export default function MyWork() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-gray-950">
+    <section id="projects" className="py-24 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Header */}
         <div className="mb-16 text-center">
