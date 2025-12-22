@@ -9,7 +9,7 @@ const my_work_data = [
     w_no: 2,
     w_name: "Full-Stack E-commerce",
     w_image: "/project1.jpg",
-    w_link: "https://e-commerce-frontend-green.vercel.app/",
+    w_link: "https://github.com/YosephDagne/E-commerce",
   },
   {
     w_no: 3,
