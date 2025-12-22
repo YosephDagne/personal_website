@@ -43,7 +43,7 @@ const Hero = () => {
         timeout = setTimeout(() => {
           setIsTyping(true);
           setCurrentIndex((prev) => (prev + 1) % titles.length);
-        }, 500); // optional small pause before typing next
+        }, 500); 
       }
     }
 

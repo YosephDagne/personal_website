@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Yosef Dagne",
   description: "Fullstack developer building the future with code...",
 
-  icons: { icon: "/jo2.jpg" },
+  icons: { icon: "/profile.jpg" },
 };
 
 export default function RootLayout({
