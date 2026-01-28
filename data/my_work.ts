@@ -1,9 +1,9 @@
 const my_work_data = [
   {
     w_no: 1,
-    w_name: "Online Pharmacy System",
+    w_name: "Online beauty-store-app",
     w_image: "/project10.png",
-    w_link: "https://github.com/YosephDagne/pharmacy-system",
+    w_link: "https://github.com/YosephDagne/beauty-store-app",
   },
   {
     w_no: 2,
