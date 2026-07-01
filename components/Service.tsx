@@ -12,10 +12,10 @@ export default function Services() {
     >
       {/* Title */}
       <div className="text-center">
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
           Services
         </h1>
-        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400"></div>
+        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-blue-500 to-cyan-400"></div>
       </div>
 
       {/* Services Grid */}
@@ -39,9 +39,9 @@ export default function Services() {
             className="relative flex flex-col justify-center gap-6 p-10 rounded-2xl
                        bg-gray-200 dark:bg-gray-800/40 backdrop-blur-lg
                        border border-white/20 dark:border-gray-700/40
-                       shadow-2xl hover:shadow-purple-500/30 cursor-pointer
+                       shadow-2xl hover:shadow-blue-500/30 cursor-pointer
                        transition-all duration-300 focus:outline-none focus:ring-4
-                       focus:ring-orange-400 focus:ring-opacity-50"
+                       focus:ring-cyan-400 focus:ring-opacity-50"
           >
             {/* Service Number */}
             <h3 className="text-3xl font-semibold text-gray-800 dark:text-gray-200">
@@ -49,7 +49,7 @@ export default function Services() {
             </h3>
 
             {/* Service Name */}
-            <h2 className="text-4xl font-extrabold bg-linear-to-r from-purple-700 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-extrabold bg-linear-to-r from-blue-700 to-cyan-400 bg-clip-text text-transparent">
               {service.s_name}
             </h2>
 
@@ -69,7 +69,7 @@ export default function Services() {
                   className="transition-transform duration-300 group-hover:translate-x-2 filter dark:invert"
                 />
               )}
-              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 transition-all duration-300 group-hover:text-orange-400">
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 transition-all duration-300 group-hover:text-cyan-400">
                 Read More
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function Services() {
             {/* Glowing Gradient Border */}
             <span
               className="absolute inset-0 rounded-3xl border-2 border-transparent 
-              bg-linear-to-r from-purple-600/40 to-orange-500/40 opacity-0 
+              bg-linear-to-r from-blue-600/40 to-cyan-500/40 opacity-0 
               hover:opacity-100 transition duration-300 pointer-events-none"
             ></span>
           </motion.div>

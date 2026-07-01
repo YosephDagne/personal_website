@@ -20,10 +20,10 @@ export default function MyWork() {
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
             Projects
           </h2>
-          <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400"></div>
+          <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-blue-500 to-cyan-400"></div>
         </div>
 
         {/* Projects Grid */}
@@ -50,7 +50,7 @@ export default function MyWork() {
 
               {/* Content */}
               <div className="p-6">
-                <span className="text-xs uppercase tracking-wide text-purple-600 dark:text-purple-400">
+                <span className="text-xs uppercase tracking-wide text-blue-600 dark:text-blue-400">
                   Project {work.w_no}
                 </span>
 
@@ -58,14 +58,14 @@ export default function MyWork() {
                   {work.w_name}
                 </h3>
 
-                <div className="mt-4 inline-flex items-center text-sm font-medium text-purple-600 dark:text-purple-400">
+                <div className="mt-4 inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400">
                   View Details
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </div>
 
               {/* Hover Border */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-purple-500/40 transition-colors duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-blue-500/40 transition-colors duration-300 pointer-events-none"></div>
             </motion.a>
           ))}
         </div>
@@ -77,7 +77,7 @@ export default function MyWork() {
               onClick={handleShowMore}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-purple-600 text-white font-medium shadow-md hover:bg-purple-700 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-medium shadow-md hover:bg-blue-700 transition-colors cursor-pointer"
             >
               {showMore ? "Show Less" : "View More Projects"}
               <ArrowRight

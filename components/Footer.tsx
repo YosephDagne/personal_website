@@ -24,7 +24,7 @@ const Footer = () => {
 
         {/* Subscription Form */}
         <form className="flex flex-col md:flex-row items-center gap-4 w-full max-w-lg">
-          <div className="flex gap-4 py-3 px-5 rounded-sm bg-gray-600 dark:bg-gray-700 w-full transition-transform duration-300 hover:scale-105 focus-within:ring-1 focus-within:ring-purple-500">
+          <div className="flex gap-4 py-3 px-5 rounded-sm bg-gray-600 dark:bg-gray-700 w-full transition-transform duration-300 hover:scale-105 focus-within:ring-1 focus-within:ring-blue-500">
             <User className="w-6 h-6 text-white" />
             <input
               type="email"

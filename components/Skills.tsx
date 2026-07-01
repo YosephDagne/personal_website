@@ -20,22 +20,22 @@ export default function Skills() {
     { name: "JavaScript", icon: <SiJavascript />, color: "text-yellow-400" },
     { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
     { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-teal-400" },
-    { name: "Node.js", icon: <SiNodedotjs />, color: "text-green-500" },
-    { name: "MongoDB", icon: <SiMongodb />, color: "text-green-400" },
+    { name: "Node.js", icon: <SiNodedotjs />, color: "text-sky-500" },
+    { name: "MongoDB", icon: <SiMongodb />, color: "text-sky-400" },
     { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-500" },
-    { name: "Git", icon: <SiGit />, color: "text-orange-500" },
+    { name: "Git", icon: <SiGit />, color: "text-cyan-500" },
     { name: "Express", icon: <SiExpress />, color: "text-gray-400" },
-    { name: ".NET", icon: <SiDotnet />, color: "text-purple-500" },
+    { name: ".NET", icon: <SiDotnet />, color: "text-blue-500" },
   ];
 
   return (
     <section className="relative py-24 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       {/* Heading */}
       <div className="relative text-center mb-16 z-10">
-        <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
           My Skills
         </h1>
-        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400"></div>
+        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-blue-500 to-cyan-400"></div>
         <p className="mt-3 text-gray-700 text-lg">
           Technologies & tools I work with
         </p>

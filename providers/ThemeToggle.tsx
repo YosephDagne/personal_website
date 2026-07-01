@@ -27,7 +27,7 @@ export default function ThemeToggle() {
       title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       className="group relative p-3 rounded-full bg-gray-100 dark:bg-gray-900  
-                 text-gray-600 dark:text-gray-300 hover:text-orange-500 dark:hover:text-yellow-400
+                 text-gray-600 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-yellow-400
                   hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer"
     >
       <div className="relative w-5 h-5">

@@ -30,8 +30,8 @@ function NavBar() {
     <div className="w-full flex items-center justify-between px-6 py-3 z-50 transition-all duration-500 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
-        <Flame className="w-20 h-10 text-orange-500" />
-        <span className="text-2xl font-bold text-orange-500 dark:text-orange-400 bg-clip-text bg-linear-to-r from-orange-400 to-amber-500">
+        <Flame className="w-20 h-10 text-cyan-500" />
+        <span className="text-2xl font-bold text-cyan-500 dark:text-cyan-400 bg-clip-text bg-linear-to-r from-cyan-400 to-cyan-500">
           Joseph
         </span>
       </div>
@@ -47,8 +47,8 @@ function NavBar() {
               }}
               className={`text-gray-800 dark:text-gray-200 font-medium px-3 py-2 transition-all duration-300 ${
                 menu === item.id
-                  ? "text-orange-500 font-semibold"
-                  : "hover:text-orange-400 hover:scale-105"
+                  ? "text-cyan-500 font-semibold"
+                  : "hover:text-cyan-400 hover:scale-105"
               }`}
             >
               {item.label}
@@ -57,7 +57,7 @@ function NavBar() {
                 className={`
     absolute left-1/2 bottom-0 
     h-[3px] w-0 
-    bg-linear-to-r from-orange-400 to-amber-400 
+    bg-linear-to-r from-cyan-400 to-cyan-400 
     rounded-full 
     transition-all duration-300 
     group-hover:w-1/3 
@@ -108,8 +108,8 @@ function NavBar() {
           {/* Mobile Header */}
           <div className="flex justify-between items-center mb-10">
             <div className="flex items-center gap-2 cursor-pointer">
-              <Flame className="w-10 h-10 text-orange-500" />
-              <span className="text-lg font-bold bg-linear-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+              <Flame className="w-10 h-10 text-cyan-500" />
+              <span className="text-lg font-bold bg-linear-to-r from-cyan-500 to-cyan-500 bg-clip-text text-transparent">
                 J
               </span>
             </div>
@@ -133,7 +133,7 @@ function NavBar() {
                   }}
                   className={`text-xl font-medium px-4 py-3 rounded-xl transition-all duration-300 flex items-center justify-center ${
                     menu === item.id
-                      ? "text-white bg-linear-to-r from-orange-500 to-amber-500 shadow-lg"
+                      ? "text-white bg-linear-to-r from-cyan-500 to-cyan-500 shadow-lg"
                       : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105"
                   }`}
                 >

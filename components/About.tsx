@@ -13,11 +13,11 @@ export default function About() {
       <div className="text-center mb-20">
         <h1
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold 
-          bg-linear-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent"
+          bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
         >
           About Me
         </h1>
-        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-purple-500 to-orange-400" />
+        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-blue-500 to-cyan-400" />
       </div>
 
       {/* Content row */}
@@ -28,7 +28,7 @@ export default function About() {
           transition={{ type: "spring", stiffness: 150, damping: 12 }}
           className="w-full md:w-1/3 bg-white/10 dark:bg-gray-800/30 backdrop-blur-xl 
           rounded-2xl p-8 shadow-xl border border-white/20 dark:border-gray-700/40 
-          hover:shadow-purple-500/20 hover:border-purple-400/50 transition"
+          hover:shadow-blue-500/20 hover:border-blue-400/50 transition"
         >
           <div className="rounded-xl overflow-hidden shadow-lg">
             <Image
@@ -52,7 +52,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="flex-1 flex flex-col gap-10 bg-white/10 dark:bg-gray-800/30 
           backdrop-blur-xl p-10 rounded-2xl shadow-xl border border-white/20 
-          dark:border-gray-700/40 hover:border-purple-400/50 transition"
+          dark:border-gray-700/40 hover:border-blue-400/50 transition"
         >
           <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
             I am a passionate full-stack developer with experience building
