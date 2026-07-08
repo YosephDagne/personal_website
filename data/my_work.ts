@@ -2,13 +2,13 @@ const my_work_data = [
   {
     w_no: 1,
     w_name: "Online beauty-store-app",
-    w_image: "/project10.png",
+    w_image: "/beauty.png",
     w_link: "https://github.com/YosephDagne/beauty-store-app",
   },
   {
     w_no: 2,
     w_name: "Full-Stack E-commerce",
-    w_image: "/project1.jpg",
+    w_image: "/E-commerce.png",
     w_link: "https://github.com/YosephDagne/E-commerce",
   },
   {
@@ -19,15 +19,10 @@ const my_work_data = [
   },
   {
     w_no: 4,
-    w_name: "Banking Management System",
-    w_image: "/project7.png",
-    w_link: "https://github.com/YosephDagne/Snake-Game",
-  },
-  {
-    w_no: 5,
-    w_name: "Netflix Clone",
-    w_image: "/project6.jpg",
-    w_link: "https://github.com/YosephDagne/Tic-Tac-Toe-Game",
+    w_name: "Scholarship Recommendation System",
+    w_image: "/scholarship.png",
+    w_link:
+      "https://github.com/naol16/Educational-adventure-path-way-scholarship-based-platform",
   },
 ];
 

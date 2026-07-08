@@ -9,7 +9,6 @@ import Works from "@/components/Works";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Accomplishments from "@/components/Accomplishments";
 import SectionDivider from "@/components/SectionDivider";
 
 const fadeInUp: HTMLMotionProps<"section"> = {
@@ -21,61 +20,58 @@ const fadeInUp: HTMLMotionProps<"section"> = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-500 overflow-hidden">
+    <div className="relative min-h-screen bg-gray-950 text-gray-100 overflow-hidden font-sans selection:bg-indigo-500/30 selection:text-white">
+
       {/* Navbar */}
       <Navbar />
 
       {/* Page container */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 pt-2">
+      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 space-y-20 sm:space-y-28">
         {/* Hero Section */}
-        <motion.section className="mb-12 sm:mb-16" {...fadeInUp}>
+        <motion.section className="relative" {...fadeInUp}>
           <Hero />
         </motion.section>
 
-        {/* Skills Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-blue-800 to-transparent dark:via-blue-800" />
-          <Skills />
-        </motion.section>
-
         {/* About Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-blue-800 to-transparent dark:via-blue-900" />
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
           <About />
-        </motion.section>
-        
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-blue-800 to-transparent dark:via-blue-600" />
-          <Accomplishments />
-        </motion.section>
-
-        {/* Services Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-sky-900 to-transparent dark:via-sky-600" />
-          <Services />
-        </motion.section>
-
-        {/* Works Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-cyan-700 to-transparent dark:via-cyan-600" />
-          <Works />
         </motion.section>
 
         {/* Education Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-blue-700 to-transparent dark:via-blue-600" />
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
           <Education />
         </motion.section>
 
+        {/* Services Section */}
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
+          <Services />
+        </motion.section>
+
+        {/* Skills Section */}
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
+          <Skills />
+        </motion.section>
+
+        {/* Works Section */}
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
+          <Works />
+        </motion.section>
+
+
         {/* Contact Section */}
-        <motion.section className="mb-12 sm:mb-16 relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-blue-800 to-transparent dark:via-blue-600" />
+        <motion.section className="relative" {...fadeInUp}>
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
           <Contact />
         </motion.section>
 
         {/* Footer Section */}
         <motion.section className="relative" {...fadeInUp}>
-          <SectionDivider colorClass="from-transparent via-gray-900 to-transparent dark:via-gray-800" />
+          <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
           <Footer />
         </motion.section>
       </main>

@@ -1,76 +1,62 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center gap-16 py-16 px-2 sm:px-8 md:px-16 lg:px-32 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200"
+      className="relative flex flex-col items-center gap-16 py-24 px-4 sm:px-8 md:px-16 lg:px-32 bg-transparent text-gray-100 overflow-hidden"
     >
+      {/* Background Ornaments */}
+      <div className="absolute -left-40 top-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -right-40 bottom-0 w-96 h-96 bg-purple-500/10 dark:bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
+
       {/* Title */}
-      <div className="text-center mb-20">
-        <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold 
-          bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
-        >
+      <div className="text-center relative z-10">
+        <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
           About Me
-        </h1>
-        <div className="h-1.5 w-28 mx-auto mt-4 rounded-full bg-linear-to-r from-blue-500 to-cyan-400" />
+        </h2>
       </div>
 
-      {/* Content row */}
-      <div className="flex flex-col md:flex-row items-start gap-20 max-w-7xl mx-auto">
-        {/* Profile Card */}
+      {/* Content */}
+      <div className="w-full max-w-4xl mx-auto relative z-10">
+        {/* About Paragraphs */}
         <motion.div
-          whileHover={{ scale: 1.03, rotateX: 8, rotateY: -8 }}
-          transition={{ type: "spring", stiffness: 150, damping: 12 }}
-          className="w-full md:w-1/3 bg-white/10 dark:bg-gray-800/30 backdrop-blur-xl 
-          rounded-2xl p-8 shadow-xl border border-white/20 dark:border-gray-700/40 
-          hover:shadow-blue-500/20 hover:border-blue-400/50 transition"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col justify-center gap-6 bg-white/2 backdrop-blur-md p-8 md:p-10 rounded-xl border border-white/10 hover:border-indigo-500/20 transition-all duration-300 relative group"
         >
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/profile.jpg"
-              width={400}
-              height={400}
-              alt="Profile"
-              className="object-cover w-full h-full"
-            />
+
+
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-relaxed">
+            Bringing ideas to life through code.
+          </h3>
+
+          <p className="text-gray-400 text-lg leading-relaxed">
+            I am a passionate full-stack developer with experience building scalable, responsive, and modern web applications. I love turning ideas into efficient, user-friendly digital experiences that live on the web.
+          </p>
+
+          <p className="text-gray-400 text-lg leading-relaxed">
+            I focus on writing clean, maintainable code while building systems that are optimized for performance and reliability. My work spans both front-end interfaces and back-end architectures, allowing me to deliver robust end-to-end solutions.
+          </p>
+
+          <p className="text-gray-400 text-lg leading-relaxed">
+            Beyond coding, I enjoy problem-solving, learning new technologies, and collaborating on projects that make a real impact.
+          </p>
+
+          <div className="mt-4 flex flex-row flex-wrap gap-4">
+            <a
+              href="/Yosef_Dagne_Adane_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3.5 bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:opacity-90 hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer whitespace-nowrap"
+            >
+              View My CV
+            </a>
           </div>
-
-          <p className="mt-6 text-center text-xl font-semibold text-gray-900 dark:text-gray-200">
-            Full-Stack Developer
-          </p>
-        </motion.div>
-
-        {/* About Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex-1 flex flex-col gap-10 bg-white/10 dark:bg-gray-800/30 
-          backdrop-blur-xl p-10 rounded-2xl shadow-xl border border-white/20 
-          dark:border-gray-700/40 hover:border-blue-400/50 transition"
-        >
-          <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
-            I am a passionate full-stack developer with experience building
-            scalable, responsive, and modern web applications. I love turning
-            ideas into efficient, user-friendly digital experiences.
-          </p>
-
-          <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
-            I focus on writing clean, maintainable code while building systems
-            that are optimized for performance and reliability. My work spans
-            both front-end and back-end technologies, allowing me to deliver
-            end-to-end solutions.
-          </p>
-
-          <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed">
-            Beyond coding, I enjoy problem-solving, learning new technologies,
-            and working on projects that make an impact.
-          </p>
         </motion.div>
       </div>
     </section>
