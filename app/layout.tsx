@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "next-themes";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   title: "Yosef Dagne",
   description: "Fullstack developer building the future with code...",
   icons: { icon: "/profile.jpg" },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative flex flex-col items-center gap-16 py-24 px-4 sm:px-8 md:px-16 lg:px-32 bg-transparent text-gray-100 overflow-hidden"
+      className="relative flex flex-col items-center gap-12 sm:gap-16 py-16 sm:py-24 px-4 sm:px-8 md:px-16 lg:px-32 bg-transparent text-gray-100 overflow-hidden"
     >
       {/* Background Ornaments */}
       <div className="absolute -left-40 top-40 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none" />

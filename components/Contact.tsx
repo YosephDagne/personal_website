@@ -148,7 +148,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative flex flex-col items-center gap-16 py-24 bg-transparent text-gray-100"
+      className="relative flex flex-col items-center gap-12 sm:gap-16 py-16 sm:py-24 bg-transparent text-gray-100"
     >
       {/* Title */}
       <div className="text-center relative z-10">

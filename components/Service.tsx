@@ -8,7 +8,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative flex flex-col items-center gap-16 px-4 py-24 bg-transparent text-gray-100"
+      className="relative flex flex-col items-center gap-12 sm:gap-16 px-4 py-16 sm:py-24 bg-transparent text-gray-100"
     >
       {/* Title */}
       <div className="text-center relative z-10">

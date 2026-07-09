@@ -262,7 +262,7 @@ export default function Skills() {
       : ALL_SKILLS.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="relative py-24 bg-transparent overflow-hidden">
+    <section id="skills" className="relative py-16 sm:py-24 bg-transparent overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[500px] bg-purple-600/5 rounded-full blur-[140px] pointer-events-none" />
 

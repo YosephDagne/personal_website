@@ -10,9 +10,9 @@ const Hero = () => {
       "Software Engineering Graduate",
       "Full Stack Web Developer",
       "Open Source Contributor",
-      ""
+      "",
     ],
-    []
+    [],
   );
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,7 +43,7 @@ const Hero = () => {
         timeout = setTimeout(() => {
           setIsTyping(true);
           setCurrentIndex((prev) => (prev + 1) % titles.length);
-        }, 500); 
+        }, 500);
       }
     }
 
@@ -53,14 +53,15 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-12 min-h-[85vh] px-4 py-16 overflow-hidden max-w-7xl mx-auto"
+      className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-10 min-h-[70vh] sm:min-h-[85vh] px-4 py-12 sm:py-16 overflow-hidden max-w-7xl mx-auto"
     >
-
       {/* Left Column: Text & Buttons */}
-      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-6 relative z-10">
+      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4 sm:gap-6 relative z-10">
         {/* Name and Greeting */}
         <div className="space-y-4">
-          <p className="text-2xl font-bold text-indigo-400 font-serif italic">Hello,</p>
+          <p className="text-2xl font-bold text-indigo-400 font-serif italic">
+            Hello,
+          </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1]">
             I&apos;m{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -90,16 +91,16 @@ const Hero = () => {
 
           <AnchorLink
             offset={80}
-            href="#education"
+            href="#contact"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-3.5 bg-transparent text-white text-sm sm:text-base font-semibold rounded-lg border border-white/20 hover:border-indigo-500/60 hover:bg-white/5 hover:scale-[1.03] active:scale-95 transition-all duration-200 cursor-pointer whitespace-nowrap"
           >
-            Resume
+            Hire Me
           </AnchorLink>
         </div>
       </div>
 
       {/* Right Column: Profile Image */}
-      <div className="flex-1 flex justify-center items-center relative z-10 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] aspect-square">
+      <div className="flex-1 flex justify-center items-center relative z-10 w-full max-w-[220px] sm:max-w-[280px] md:max-w-[380px] lg:max-w-[420px] aspect-square mb-2 md:mb-0">
         <div className="w-full h-full relative rounded-xl overflow-hidden shadow-[0_0_50px_rgba(99,102,241,0.15)] border border-white/10 p-3 bg-white/2 backdrop-blur-md animate-fade-in-up">
           <div className="w-full h-full relative rounded-xl overflow-hidden">
             <Image

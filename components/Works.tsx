@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import my_work_data from "../data/my_work";
-import { Github } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 export default function MyWork() {
   return (
-    <section id="projects" className="relative py-24 bg-transparent text-gray-100">
+    <section id="projects" className="relative py-16 sm:py-24 bg-transparent text-gray-100">
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -61,9 +61,8 @@ export default function MyWork() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="inline-flex items-center gap-2 self-start px-5 py-2.5 rounded-full bg-indigo-500/80 hover:bg-indigo-500 backdrop-blur-sm text-white text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
+                  className="inline-flex items-center self-start px-5 py-2.5 rounded-full bg-indigo-500/80 hover:bg-indigo-500 backdrop-blur-sm text-white text-sm font-bold transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg"
                 >
-                  <Github className="w-4 h-4" />
                   View Project
                 </a>
               </motion.div>

@@ -26,7 +26,7 @@ export default function Home() {
       <Navbar />
 
       {/* Page container */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 space-y-20 sm:space-y-28">
+      <main className="relative z-10 max-w-[430px] sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 space-y-14 sm:space-y-20 lg:space-y-28 rounded-[2rem] border border-white/10 bg-gray-900/20 backdrop-blur-xl sm:rounded-none sm:border-none sm:bg-transparent sm:backdrop-blur-0">
         {/* Hero Section */}
         <motion.section className="relative" {...fadeInUp}>
           <Hero />

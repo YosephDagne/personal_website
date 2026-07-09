@@ -23,8 +23,14 @@ function NavBar() {
     }
   };
 
+  const goToSection = (id: string) => {
+    setMenu(id);
+    setIsMenuOpen(false);
+    smoothScroll(id);
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-500 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 transition-all duration-500 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -38,10 +44,7 @@ function NavBar() {
           {navItems.map((item) => (
             <li key={item.id} className="relative group">
               <button
-                onClick={() => {
-                  setMenu(item.id);
-                  smoothScroll(item.id);
-                }}
+                onClick={() => goToSection(item.id)}
                 className={`text-sm font-medium transition-all duration-300 ${
                   menu === item.id
                     ? "text-indigo-600 dark:text-indigo-400 font-bold"
@@ -69,78 +72,72 @@ function NavBar() {
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center">
           <button
-            onClick={() => setIsMenuOpen(true)}
-            className="flex flex-col justify-center items-center w-10 h-10 rounded-full bg-gray-100/80 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-200/50 dark:border-gray-700/50"
+            type="button"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="relative flex h-11 w-11 items-center justify-center"
           >
             <span
-              className={`w-5 h-0.5 bg-gray-800 dark:bg-gray-200 mb-1 rounded-full transition-transform duration-300 ${
-                isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              className={`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-end gap-1.5 transition-all duration-500 ease-in-out transform-gpu ${
+                isMenuOpen ? "opacity-0 scale-90" : "opacity-100 scale-100"
               }`}
-            ></span>
+            >
+              <span className="h-0.5 w-8 rounded-full bg-gray-800 dark:bg-gray-200 transition-all duration-500 ease-in-out"></span>
+              <span className="h-0.5 w-6 rounded-full bg-gray-800 dark:bg-gray-200 transition-all duration-500 ease-in-out"></span>
+              <span className="h-0.5 w-4 rounded-full bg-gray-800 dark:bg-gray-200 transition-all duration-500 ease-in-out"></span>
+            </span>
+
             <span
-              className={`w-5 h-0.5 bg-gray-800 dark:bg-gray-200 mb-1 rounded-full transition-opacity duration-300 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
+              className={`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center transition-all duration-500 ease-in-out transform-gpu ${
+                isMenuOpen
+                  ? "opacity-100 scale-100 rotate-0"
+                  : "opacity-0 scale-90 rotate-45"
               }`}
-            ></span>
-            <span
-              className={`w-5 h-0.5 bg-gray-800 dark:bg-gray-200 rounded-full transition-transform duration-300 ${
-                isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
-            ></span>
+            >
+              <span className="absolute h-0.5 w-7 rounded-full bg-gray-800 dark:bg-gray-200 rotate-45 transition-all duration-500 ease-in-out"></span>
+              <span className="absolute h-0.5 w-7 rounded-full bg-gray-800 dark:bg-gray-200 -rotate-45 transition-all duration-500 ease-in-out"></span>
+            </span>
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`fixed top-0 right-0 w-full sm:w-80 h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl z-50 shadow-2xl transition-transform duration-500 ease-in-out border-l border-gray-200/50 dark:border-gray-800/50 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`absolute left-0 top-full z-40 w-full md:hidden text-gray-100 transition-all duration-300 ease-out ${
+            isMenuOpen
+              ? "pointer-events-auto opacity-100 translate-y-0"
+              : "pointer-events-none opacity-0 -translate-y-2"
           }`}
         >
-          <div className="flex flex-col h-full p-8">
-            {/* Mobile Header */}
-            <div className="flex justify-between items-center mb-12">
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                  Yosef
-                </span>
-              </div>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                ✕
-              </button>
+          <div className="overflow-hidden rounded-sm border border-white/10 bg-[#020617]/98 shadow-2xl shadow-black/35 backdrop-blur-xl">
+            <div className="px-6 pb-8 pt-3">
+              <ul className="flex flex-col gap-6">
+                {navItems.map((item) => (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => {
+                        goToSection(item.id);
+                      }}
+                      className={`w-full text-left text-[22px] font-semibold tracking-tight transition-all duration-300 ${
+                        menu === item.id
+                          ? "text-white"
+                          : "text-gray-100 hover:text-white"
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-            {/* Mobile Nav */}
-            <ul className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => {
-                      setMenu(item.id);
-                      setIsMenuOpen(false);
-                      smoothScroll(item.id);
-                    }}
-                    className={`w-full text-left text-lg font-medium px-4 py-3 rounded-2xl transition-all duration-300 ${
-                      menu === item.id
-                        ? "text-white bg-linear-to-r from-indigo-500 to-purple-500 shadow-lg shadow-indigo-500/30"
-                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/50"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 
         {/* Backdrop */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-500"
+            className="fixed inset-0 z-30 bg-black/35 md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
