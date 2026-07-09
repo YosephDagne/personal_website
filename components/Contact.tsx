@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { toast } from "react-toastify";
 
 import {
   Mail,
@@ -104,17 +103,19 @@ const Contact = () => {
     }
   };
 
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      toast.error("Please fix the errors before submitting.");
       return;
     }
 
     setIsSubmitting(true);
+    setSubmitStatus("idle");
     const submissionData = {
       ...formData,
       access_key: "96e914f2-7fc3-4512-ab68-69a3b85508ee",
@@ -131,14 +132,14 @@ const Contact = () => {
       }).then((res) => res.json());
 
       if (result.success) {
-        toast.success(result.message);
+        setSubmitStatus("success");
         setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
         setErrors({});
       } else {
-        toast.error("Failed to send. Try again.");
+        setSubmitStatus("error");
       }
     } catch {
-      toast.error("Network error. Try again.");
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -272,6 +273,17 @@ const Contact = () => {
               </p>
             </div>
           </div>
+
+          {submitStatus === "success" && (
+            <p className="text-sm text-green-400 text-center font-medium">
+              ✅ Message sent successfully! I&apos;ll get back to you soon.
+            </p>
+          )}
+          {submitStatus === "error" && (
+            <p className="text-sm text-red-400 text-center font-medium">
+              ❌ Failed to send. Please try again.
+            </p>
+          )}
 
           <button
             type="submit"
