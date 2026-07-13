@@ -30,22 +30,22 @@ function NavBar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4 py-3 md:px-6 md:py-4 transition-all duration-500 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 px-3 py-3 sm:px-4 md:px-6 md:py-4 transition-all duration-500 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-sm">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 sm:gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform duration-300">
-          <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+          <span className="text-xl sm:text-2xl font-black tracking-tight text-transparent bg-clip-text bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
             Yosef
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navItems.map((item) => (
             <li key={item.id} className="relative group">
               <button
                 onClick={() => goToSection(item.id)}
-                className={`text-sm font-medium transition-all duration-300 ${
+                className={`relative text-sm font-medium transition-all duration-300 ${
                   menu === item.id
                     ? "text-indigo-600 dark:text-indigo-400 font-bold"
                     : "text-gray-600 dark:text-gray-300 hover:text-indigo-500 dark:hover:text-indigo-400"
@@ -70,13 +70,13 @@ function NavBar() {
         </ul>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button
             type="button"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="relative flex h-11 w-11 items-center justify-center"
+            className="relative flex h-11 w-11 items-center justify-center rounded-full border border-transparent transition-colors hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             <span
               className={`absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-end gap-1.5 transition-all duration-500 ease-in-out transform-gpu ${
@@ -104,22 +104,22 @@ function NavBar() {
         {/* Mobile Menu */}
         <div
           ref={menuRef}
-          className={`absolute left-0 top-full z-40 w-full md:hidden text-gray-100 transition-all duration-300 ease-out ${
+          className={`absolute inset-x-0 top-full z-40 lg:hidden text-gray-100 transition-all duration-300 ease-out origin-top ${
             isMenuOpen
-              ? "pointer-events-auto opacity-100 translate-y-0"
-              : "pointer-events-none opacity-0 -translate-y-2"
+              ? "pointer-events-auto opacity-100 translate-y-0 scale-y-100"
+              : "pointer-events-none opacity-0 -translate-y-2 scale-y-95"
           }`}
         >
-          <div className="overflow-hidden rounded-sm border border-white/10 bg-[#020617]/98 shadow-2xl shadow-black/35 backdrop-blur-xl">
-            <div className="px-6 pb-8 pt-3">
-              <ul className="flex flex-col gap-6">
+          <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-b-2xl border border-white/10 border-t-0 bg-[#020617]/98 shadow-2xl shadow-black/35 backdrop-blur-xl">
+            <div className="max-h-[calc(100vh-4.5rem)] overflow-y-auto px-4 pb-8 pt-4 sm:px-6">
+              <ul className="flex flex-col gap-4 sm:gap-5">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <button
                       onClick={() => {
                         goToSection(item.id);
                       }}
-                      className={`w-full text-left text-[22px] font-semibold tracking-tight transition-all duration-300 ${
+                      className={`w-full text-left text-lg sm:text-xl font-semibold tracking-tight transition-all duration-300 ${
                         menu === item.id
                           ? "text-white"
                           : "text-gray-100 hover:text-white"
@@ -137,7 +137,7 @@ function NavBar() {
         {/* Backdrop */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 z-30 bg-black/35 md:hidden"
+            className="fixed inset-0 z-30 bg-black/35 lg:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         )}

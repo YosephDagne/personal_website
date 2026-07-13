@@ -8,20 +8,21 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative flex flex-col items-center gap-12 sm:gap-16 px-4 py-16 sm:py-24 bg-transparent text-gray-100"
+      className="relative flex flex-col items-center gap-12 sm:gap-16 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-transparent text-gray-100"
     >
       {/* Title */}
       <div className="text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-black bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           What I Do
         </h2>
-        <p className="mt-4 text-gray-400 text-lg font-medium max-w-2xl mx-auto">
-          Here are some of the key services and solutions I specialize in delivering
+        <p className="mt-4 text-base sm:text-lg text-gray-400 font-medium max-w-2xl mx-auto">
+          Here are some of the key services and solutions I specialize in
+          delivering
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl relative z-10">
+      <div className="grid w-full max-w-6xl grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 relative z-10">
         {Services_Data.map((service, index) => {
           // Dynamically resolve the Lucide icon component
           const IconComponent = (LucideIcons as any)[service.iconName];
@@ -33,13 +34,21 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               variants={{
-                rest: { rotateX: 0, scale: 1, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)" },
-                hover: { rotateX: 12, scale: 1.02, boxShadow: "0px 25px 40px rgba(99, 102, 241, 0.15)" }
+                rest: {
+                  rotateX: 0,
+                  scale: 1,
+                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
+                },
+                hover: {
+                  rotateX: 12,
+                  scale: 1.02,
+                  boxShadow: "0px 25px 40px rgba(99, 102, 241, 0.15)",
+                },
               }}
               transition={{ type: "spring", stiffness: 200, damping: 25 }}
               style={{ perspective: 1200, transformStyle: "preserve-3d" }}
               whileHover="hover"
-              className="group relative flex flex-col gap-5 p-8 rounded-xl
+              className="group relative flex h-full flex-col gap-5 p-6 sm:p-8 rounded-xl
                          bg-white/2 dark:bg-white/2 backdrop-blur-md
                          border border-white/10 hover:border-indigo-500/30
                          transition-colors duration-300"
@@ -62,8 +71,6 @@ export default function Services() {
               <p className="text-gray-400 text-base leading-relaxed">
                 {service.s_desc}
               </p>
-
-
             </motion.div>
           );
         })}

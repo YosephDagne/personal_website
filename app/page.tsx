@@ -15,18 +15,17 @@ const fadeInUp: HTMLMotionProps<"section"> = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-50px" },
-  transition: { duration: 0.6, ease: "easeOut" }
+  transition: { duration: 0.6, ease: "easeOut" },
 };
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-gray-950 text-gray-100 overflow-hidden font-sans selection:bg-indigo-500/30 selection:text-white">
-
+    <div className="relative min-h-screen bg-gray-950 text-gray-100 overflow-x-clip font-sans selection:bg-indigo-500/30 selection:text-white">
       {/* Navbar */}
       <Navbar />
 
       {/* Page container */}
-      <main className="relative z-10 max-w-[430px] sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 space-y-14 sm:space-y-20 lg:space-y-28 rounded-[2rem] border border-white/10 bg-gray-900/20 backdrop-blur-xl sm:rounded-none sm:border-none sm:bg-transparent sm:backdrop-blur-0">
+      <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 space-y-14 sm:space-y-20 lg:space-y-28 rounded-[2rem] border border-white/10 bg-gray-900/20 backdrop-blur-xl sm:rounded-none sm:border-none sm:bg-transparent sm:backdrop-blur-0">
         {/* Hero Section */}
         <motion.section className="relative" {...fadeInUp}>
           <Hero />
@@ -61,7 +60,6 @@ export default function Home() {
           <SectionDivider colorClass="from-transparent via-indigo-500/10 to-transparent" />
           <Works />
         </motion.section>
-
 
         {/* Contact Section */}
         <motion.section className="relative" {...fadeInUp}>

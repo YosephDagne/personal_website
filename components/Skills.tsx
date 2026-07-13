@@ -262,31 +262,34 @@ export default function Skills() {
       : ALL_SKILLS.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="relative py-16 sm:py-24 bg-transparent overflow-hidden">
+    <section
+      id="skills"
+      className="relative py-16 sm:py-24 bg-transparent overflow-hidden"
+    >
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[500px] bg-purple-600/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4">
-
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* ── Heading ─────────────────────────────────────────────────────── */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl md:text-5xl font-black bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             My Tech Stack
           </h2>
-          <p className="mt-4 text-gray-400 text-lg font-medium max-w-2xl mx-auto">
-           Technologies and tools I use to transform ideas into scalable, user-focused software solutions.
+          <p className="mt-4 text-base sm:text-lg text-gray-400 font-medium max-w-2xl mx-auto">
+            Technologies and tools I use to transform ideas into scalable,
+            user-focused software solutions.
           </p>
         </motion.div>
 
         {/* ── Category Filter Pills ────────────────────────────────────────── */}
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -296,7 +299,7 @@ export default function Skills() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`relative px-5 py-2 rounded-lg text-sm font-semibold border transition-all duration-250 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+              className={`relative px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold border transition-all duration-250 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
                 activeCategory === cat
                   ? "bg-indigo-500/20 border-indigo-500/50 text-indigo-300 shadow-[0_0_20px_rgba(99,102,241,0.2)]"
                   : "bg-white/3 border-white/10 text-gray-400 hover:border-white/25 hover:text-gray-200"
@@ -318,7 +321,7 @@ export default function Skills() {
         <AnimatePresence mode="popLayout">
           <motion.div
             key={activeCategory}
-            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-2 sm:gap-4"
+            className="grid w-full grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:grid-cols-8 xl:grid-cols-10"
           >
             {filtered.map((skill, index) => {
               return (
@@ -330,20 +333,30 @@ export default function Skills() {
                   exit={{ opacity: 0, scale: 0.88, y: 20 }}
                   transition={{ duration: 0.3, delay: index * 0.04 }}
                   variants={{
-                    rest: { rotateX: 0, scale: 1, boxShadow: "0px 4px 8px rgba(0,0,0,0.2)" },
-                    hover: { rotateX: 12, scale: 1.05, boxShadow: `0px 15px 30px ${skill.glow}` },
+                    rest: {
+                      rotateX: 0,
+                      scale: 1,
+                      boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
+                    },
+                    hover: {
+                      rotateX: 12,
+                      scale: 1.05,
+                      boxShadow: `0px 15px 30px ${skill.glow}`,
+                    },
                   }}
                   whileHover="hover"
                   style={{ perspective: 1000, transformStyle: "preserve-3d" }}
-                  className="group relative flex flex-col items-center justify-center gap-2 p-2 rounded-xl
+                  className="group relative flex aspect-square min-h-[88px] w-full flex-col items-center justify-center gap-2 rounded-xl p-2 sm:p-3
                              bg-white/2 backdrop-blur-md border border-white/8
                              hover:border-white/20 transition-colors duration-250 cursor-default
-                             aspect-square w-full max-w-[90px] mx-auto"
+                             mx-auto"
                 >
                   {/* Ambient glow layer */}
                   <div
                     className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                    style={{ background: `radial-gradient(circle at 50% 30%, ${skill.glow}, transparent 70%)` }}
+                    style={{
+                      background: `radial-gradient(circle at 50% 30%, ${skill.glow}, transparent 70%)`,
+                    }}
                   />
 
                   {/* Icon */}
@@ -362,7 +375,6 @@ export default function Skills() {
             })}
           </motion.div>
         </AnimatePresence>
-
       </div>
     </section>
   );

@@ -41,7 +41,8 @@ const Contact = () => {
     } else if (nameTrimmed.length < 2) {
       e.name = "Name must be at least 2 characters.";
     } else if (!/^[A-Za-z\s'-]+$/.test(nameTrimmed)) {
-      e.name = "Name may only contain letters, spaces, hyphens, or apostrophes.";
+      e.name =
+        "Name may only contain letters, spaces, hyphens, or apostrophes.";
     }
 
     // Email — required, valid format
@@ -89,7 +90,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -103,7 +104,9 @@ const Contact = () => {
     }
   };
 
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -133,7 +136,13 @@ const Contact = () => {
 
       if (result.success) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
         setErrors({});
       } else {
         setSubmitStatus("error");
@@ -148,22 +157,22 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative flex flex-col items-center gap-12 sm:gap-16 py-16 sm:py-24 bg-transparent text-gray-100"
+      className="relative flex flex-col items-center gap-12 sm:gap-16 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-transparent text-gray-100"
     >
       {/* Title */}
       <div className="text-center relative z-10">
-        <h1 className="text-4xl sm:text-5xl font-black bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
-  Get in Touch
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500">
+          Get in Touch
         </h1>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 w-full max-w-6xl relative z-10">
+      <div className="flex w-full max-w-6xl flex-col lg:flex-row gap-8 xl:gap-12 relative z-10">
         {/* Left Side Info */}
-        <div className="flex flex-col gap-8 w-full lg:w-1/2 p-8 bg-white/2 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl">
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-400 to-pink-400">
+        <div className="flex min-w-0 flex-col gap-8 w-full lg:w-1/2 p-6 sm:p-8 bg-white/2 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl">
+          <h2 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-indigo-400 to-pink-400">
             Let&apos;s Talk
           </h2>
-          <p className="text-base text-gray-400 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
             I&apos;m currently available for new freelance or full-time
             projects. Send a message and let&apos;s build something awesome
             together!
@@ -201,9 +210,9 @@ const Contact = () => {
         <form
           onSubmit={onSubmit}
           noValidate
-          className="w-full lg:w-1/2 bg-white/2 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/10 flex flex-col justify-between gap-6"
+          className="w-full min-w-0 lg:w-1/2 bg-white/2 backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-2xl border border-white/10 flex flex-col justify-between gap-6"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             <InputField
               label="Your Name"
               name="name"
@@ -302,17 +311,22 @@ const Contact = () => {
 /*                            Reusable Child Components                       */
 /* -------------------------------------------------------------------------- */
 
-const ContactCard = ({ Icon, label, value, href }: ContactCardProps & { href?: string }) => {
+const ContactCard = ({
+  Icon,
+  label,
+  value,
+  href,
+}: ContactCardProps & { href?: string }) => {
   const content = (
     <>
       <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-500/10">
         <Icon className="w-6 h-6 text-indigo-400" />
       </div>
       <div>
-        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">{label}</p>
-        <p className="text-base font-semibold text-white mt-0.5">
-          {value}
+        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+          {label}
         </p>
+        <p className="text-base font-semibold text-white mt-0.5">{value}</p>
       </div>
     </>
   );
@@ -323,7 +337,7 @@ const ContactCard = ({ Icon, label, value, href }: ContactCardProps & { href?: s
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-4 p-4 bg-white/2 border border-white/5 hover:border-indigo-500/20 hover:bg-white/4 rounded-xl shadow-sm transition-all duration-300 group cursor-pointer w-full"
+        className="flex items-center gap-4 p-4 bg-white/2 border border-white/5 hover:border-indigo-500/20 hover:bg-white/4 rounded-xl shadow-sm transition-all duration-300 group cursor-pointer w-full min-w-0"
       >
         {content}
       </a>
@@ -331,7 +345,7 @@ const ContactCard = ({ Icon, label, value, href }: ContactCardProps & { href?: s
   }
 
   return (
-    <div className="flex items-center gap-4 p-4 bg-white/2 border border-white/5 rounded-xl shadow-sm transition-all w-full">
+    <div className="flex items-center gap-4 p-4 bg-white/2 border border-white/5 rounded-xl shadow-sm transition-all w-full min-w-0">
       {content}
     </div>
   );
@@ -368,7 +382,7 @@ const InputField = ({
       value={value}
       placeholder={placeholder}
       onChange={onChange}
-      className={`w-full px-5 py-4 rounded-lg bg-white/2 border text-white placeholder-gray-600 focus:outline-none transition-all duration-300 ${
+      className={`w-full min-w-0 px-5 py-3 rounded-lg bg-white/2 border text-white placeholder-gray-600 focus:outline-none transition-all duration-300 ${
         error
           ? "border-red-500/60 focus:border-red-500"
           : "border-white/10 focus:border-indigo-500/50"
